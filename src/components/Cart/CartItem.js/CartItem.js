@@ -1,4 +1,4 @@
-import { Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, TableCell, TableRow, TextField } from '@material-ui/core'
+import { Avatar, Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, TableCell, TableRow, TextField } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles';
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
@@ -50,7 +50,9 @@ const CartItem = ({cartItem}) => {
             <>
             <TableRow >
                 <TableCell>{cartItem.name}</TableCell>
-                <TableCell >{cartItem.img}</TableCell>
+                <TableCell >
+                <img src={cartItem.image}/>
+                </TableCell>
                 <TableCell>{cartItem.price}</TableCell>
                 <TableCell>{cartItem.qty}</TableCell>
                 <TableCell>{cartItem.subtotal}</TableCell>
